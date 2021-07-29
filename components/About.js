@@ -1,43 +1,17 @@
+import Skills from "./Skills";
+
 export default function About() {
-  const skills = [
-    {
-      name: "Skill1",
-      percentage: 65,
-    },
-    {
-      name: "Skill2",
-      percentage: 25,
-    },
-    {
-      name: "Skill3",
-      percentage: 85,
-    },
-  ];
   return (
-    <div className="grid grid-cols-4 gap-20">
-      <div className="col-span-2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nullam
-        augue dolor libero at in. Egestas in elit vitae tincidunt morbi egestas
-        nec massa. Pretium, placerat quis sem gravida vel quam nisl in semper.
-        Platea enim nunc aliquam volutpat, ut sed morbi. Sit leo aliquam at
-        amet, eu dictumst accumsan eu, quis. Nam ac mattis adipiscing euismod
-        arcu ac laoreet vitae at. Nibh etiam dictumst nibh ut. Vitae massa
-        rhoncus, et massa. Diam fermentum malesuada scelerisque orci massa.
-      </div>
-      <div className="col-span-2 ">
-        {skills.map((skill, i) => (
-          <div key={i} className=" w-full bg-gray-100 mb-4">
-            <div className="flex justify-between px-2">
-              <div>{skill.name}</div>
-              <div>{skill.percentage}%</div>
-            </div>
-            <div
-              className="bg-gray-700 h-1"
-              style={{ width: `${skill.percentage}% ` }}
-            ></div>
-          </div>
-        ))}
-      </div>
+    <div className="grid grid-cols-2 gap-20 items-center">
+      <p className="text-2xl">
+        I’m a software developer from the Dominican Republic. I’m focused on
+        Front-end/Web Development. Furthermore, I love to solve problems and
+        create innovative interfaces. <br />I want to improve my skills to
+        create interactive webs using micro interactions and animations that
+        allows the user to digest the information and guide them in an immersive
+        experience.
+      </p>
+      <Skills />
     </div>
   );
 }

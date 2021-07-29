@@ -10,12 +10,39 @@
   color: transparent;
 }
 
+.floating-textarea > textarea::placeholder {
+  color: transparent;
+}
+
 .floating-input > input:focus,
 .floating-input > input:not(:placeholder-shown) {
   @apply pt-8;
 }
 
+.floating-textarea > textarea:focus,
+.floating-textarea > textarea:not(:placeholder-shown) {
+  @apply pt-10;
+}
+
 .floating-input > input:focus ~ label,
 .floating-input > input:not(:placeholder-shown) ~ label {
   @apply opacity-75 scale-75 -translate-y-5 -translate-x-1;
+}
+
+.floating-textarea > textarea:focus ~ label,
+.floating-textarea > textarea:not(:placeholder-shown) ~ label {
+  @apply opacity-75 scale-75 -translate-y-5 -translate-x-1;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }

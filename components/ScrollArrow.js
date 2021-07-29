@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaArrowUp } from "react-icons/fa";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,11 +16,7 @@ export default function ScrollToTop() {
   useEffect(() => {
     // Button is displayed after scrolling for 500 pixels
     const toggleVisibility = () => {
-      if (window.pageYOffset > 500) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      window.pageYOffset > 500 ? setIsVisible(true) : setIsVisible(false);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -28,12 +25,13 @@ export default function ScrollToTop() {
   }, []);
 
   return (
-    <div className="">
-      {isVisible && (
-        <div onClick={scrollToTop}>
-          <h3 className="motion-safe:animate-fadeIn">Go up!</h3>
-        </div>
-      )}
+    <div
+      className={`${
+        isVisible ? " opacity-100" : " opacity-0"
+      } border-2 hover:border-gray-900 border-gray-100 p-2 transition-all cursor-pointer`}
+      onClick={scrollToTop}
+    >
+      <FaArrowUp className="w-6 h-6" />
     </div>
   );
 }

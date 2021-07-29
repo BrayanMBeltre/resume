@@ -3,27 +3,21 @@ import UnderLineButton from "./UnderLineButton";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between py-8 px-6 bg-gray-100 w-full text-center sm:text-left">
-      <div className="mb-2 sm:mb-0">
-        <Link href="/" passHref>
-          <UnderLineButton
-            className="font-bold text-xl"
-            text="Brayan M. Beltre"
-          />
-        </Link>
-      </div>
-      <div className="flex gap-4">
-        <Link href="#Projects" passHref>
-          <UnderLineButton text="Work" />
-        </Link>
+    <nav className="flex flex-row justify-between py-8 px-6 bg-gray-100 w-full text-center">
+      <Link href="/" passHref>
+        <UnderLineButton className="font-bold text-3xl">
+          Brayan M. Beltre
+        </UnderLineButton>
+      </Link>
+      <div className="flex gap-4 text-2xl">
         <Link href="#About" passHref>
-          <UnderLineButton text="About" />
+          <UnderLineButton>About</UnderLineButton>
+        </Link>
+        <Link href="#Projects" passHref>
+          <UnderLineButton>Work</UnderLineButton>
         </Link>
         <Link href="#Contact" passHref>
-          <UnderLineButton text="Contact" />
-        </Link>
-        <Link href="#Other" passHref>
-          <UnderLineButton text="Other" />
+          <UnderLineButton>Contact</UnderLineButton>
         </Link>
       </div>
     </nav>

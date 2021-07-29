@@ -1,16 +1,14 @@
 import { forwardRef } from "react";
 
 const UnderLineButton = forwardRef(
-  ({ onClick, href, className, text }, ref) => {
+  ({ onClick, href, className, children }, ref) => {
     return (
-      <a
-        href={href}
-        onClick={onClick}
-        ref={ref}
-        className={`text-2xl border-b-2 hover:border-gray-900 border-gray-100 transition-all cursor-pointer ${className}`}
-      >
-        {text}
-      </a>
+      <div className="group relative cursor-pointer">
+        <div href={href} onClick={onClick} ref={ref} className={`${className}`}>
+          {children}
+        </div>
+        <span className="absolute left-0 w-0 group-hover:w-full transition-all h-0.5 bg-gray-900"></span>
+      </div>
     );
   }
 );
