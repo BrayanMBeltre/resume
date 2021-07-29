@@ -4,7 +4,7 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-export default function ProjectDetails({ project }) {
+export default function ProjectDetails({ modalIsOpen, project }) {
   const arrowStyles = {
     position: "absolute",
     top: "50%",
@@ -43,7 +43,7 @@ export default function ProjectDetails({ project }) {
     );
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 w-screen h-screen md:w-full md:h-full">
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -62,20 +62,30 @@ export default function ProjectDetails({ project }) {
           />
         ))}
       </Carousel>
-      <div className="p-8">
-        <div className="flex justify-between items-center mb-4">
-          <div className="text-2xl">{project.title}</div>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={project.siteLink}
-            className="flex border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-gray-50 p-2 rounded-md transition-all duration-100 items-center"
-          >
-            Open Site
-          </a>
+      <div className="px-4 pt-32 md:p-8">
+        <div className="md:flex justify-between items-center mb-4">
+          <div className="text-2xl font-bold mb-4 md:mb-0">{project.title}</div>
         </div>
         <div className="w-full border-b-2 border-gray-900 mb-4"></div>
-        {project.description}
+        <div>
+          <div className="mb-8">{project.description}</div>
+          <div className="flex justify-end gap-4">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={project.siteLink}
+              className="flex border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-gray-50 p-2 rounded-md transition-all duration-100 items-center"
+            >
+              Open Site
+            </a>
+            <a
+              onClick={() => modalIsOpen()}
+              className="flex border-2 border-red-700 text-red-700 hover:bg-red-700 hover:text-red-50 p-2 rounded-md transition-all duration-100 items-center"
+            >
+              Close
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

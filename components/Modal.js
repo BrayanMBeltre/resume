@@ -5,7 +5,7 @@ Modal.setAppElement("body");
 // modal styles needed for clean modal
 const style = {
   content: {
-    top: "45%",
+    top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",

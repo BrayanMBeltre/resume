@@ -8,23 +8,25 @@ export default function ProjectList({ project }) {
 
   return (
     <>
-      <div onClick={() => setIsOpen(true)} className="flex cursor-pointer">
+      <div
+        onClick={() => setIsOpen(true)}
+        className="flex cursor-pointer mb-16 md:mb-8"
+      >
         <div>
           <h2 className="text-2xl mb-4">{project.title}</h2>
-          <div className=" transition-all transform motion-safe:hover:scale-105">
+          <div className="w-80 h-52 relative transition-all transform motion-safe:hover:scale-105">
             <Image
               className="rounded-md"
               src={project.thumbnail}
               alt={project.alt}
-              width={394.1}
-              height={247.8}
-              priority={true}
+              layout="fill"
+              objectFit="cover"
             />
           </div>
         </div>
       </div>
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-        <ProjectDetails project={project} />
+        <ProjectDetails modalIsOpen={setIsOpen} project={project} />
       </Modal>
     </>
   );
