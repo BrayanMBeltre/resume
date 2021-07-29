@@ -1,2 +1,11 @@
 // next.config.js
-module.exports = {};
+
+const { SERVICE_ID, TEMPLATE_ID, USER_ID } = process.env;
+
+const env = {
+  SERVICE_ID,
+  TEMPLATE_ID,
+  USER_ID,
+};
+
+module.exports = { env };
