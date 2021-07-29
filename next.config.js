@@ -1,5 +1,7 @@
 // next.config.js
 module.exports = {
+  basepath: "/resume",
+  assetPrefix: "/resume",
   images: {
     domains: ["res.cloudinary.com"],
     loader: "cloudinary",
