@@ -21,7 +21,7 @@ export default function Landing() {
 
       <div className="flex justify-center transform -translate-x-32 z-0">
         <Image
-          src="/Profile.jpg"
+          src="/Profile.jpeg"
           alt="Profile Photo"
           width={384}
           height={512}
