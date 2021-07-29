@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BiDownArrow } from "react-icons/bi";
-import { BsArrowDown } from "react-icons/bs";
 
-const prefix = "/resume";
 export default function Landing() {
   return (
     <div className="grid grid-cols-2 items-center mb-24 ">
@@ -24,10 +21,11 @@ export default function Landing() {
 
       <div className="flex justify-center transform -translate-x-32 z-0">
         <Image
-          src={prefix + "/profile.jpg"}
+          src="/Profile.jpg"
           alt="Profile Photo"
           width={384}
           height={512}
+          priority={true}
         />
       </div>
     </div>
