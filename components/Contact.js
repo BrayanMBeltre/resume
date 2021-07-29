@@ -4,13 +4,9 @@ import Form from "./Form";
 import UnderLineButton from "./UnderLineButton";
 
 export default function Contact() {
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText("brayanmb07@gmail.com");
-  };
-
   return (
-    <div className="grid grid-cols-2 items-center">
-      <div className="text-xl">
+    <div className="grid md:grid-cols-2 items-center">
+      <div className="text-xl mb-8">
         {/* github */}
 
         <div className="flex items-center mb-8">

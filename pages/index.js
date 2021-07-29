@@ -11,7 +11,7 @@ export default function Home() {
     <div className="bg-gray-100">
       <Navbar />
 
-      <div className="fixed bottom-8 right-10 ">
+      <div className="fixed bottom-8 right-10 invisible md:visible">
         <ScrollArrow />
       </div>
       <div className="px-6 max-w-6xl mx-auto">
