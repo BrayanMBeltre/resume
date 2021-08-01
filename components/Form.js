@@ -1,14 +1,24 @@
-import emailjs from "emailjs-com";
-import { useRef, useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import LoadingButton from "./LoadingButton";
+import emailjs from 'emailjs-com';
+import { useRef, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import LoadingButton from './LoadingButton';
 
 export default function Form() {
   const [isSending, setisSending] = useState(false);
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
+
+  const notiStyles = {
+    position: 'top-right',
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    className: 'text-center',
+  };
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -26,15 +36,14 @@ export default function Form() {
           e.target,
           process.env.USER_ID
         );
-        toast.dark("Email Sent!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          className: "text-center",
-        });
+
+        if (localStorage.getItem('isDarkmode') === 'true') {
+          console.log(localStorage.getItem('isDarkmode'));
+          toast('Email Sent!', notiStyles);
+        } else {
+          toast.dark('Email Sent!', notiStyles);
+        }
+
         setisSending(false);
       } catch (error) {
         console.error(error);
@@ -42,9 +51,9 @@ export default function Form() {
       }
     }
 
-    nameRef.current.value = null;
-    emailRef.current.value = null;
-    messageRef.current.value = null;
+    // nameRef.current.value = null;
+    // emailRef.current.value = null;
+    // messageRef.current.value = null;
   };
 
   return (
@@ -58,12 +67,12 @@ export default function Form() {
           name="from_name"
           ref={nameRef}
           required={true}
-          className="bg-gray-100 border-b-2 border-gray-600 focus:outline-none focus:border-gray-900 focus:shadow-sm w-full p-3 h-16"
+          className="dark:text-gray-50 bg-gray-100 dark:bg-gray-900 border-b-2 border-gray-600 dark:border-gray-50 focus:outline-none focus:border-gray-900 dark:focus:border-gray-100 focus:shadow-sm w-full p-3 h-16"
           placeholder="name@example.com"
         />
         <label
           htmlFor="name"
-          className="absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out "
+          className="dark:text-gray-50 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out"
         >
           Name
         </label>
@@ -76,12 +85,12 @@ export default function Form() {
           name="reply_to"
           ref={emailRef}
           required={true}
-          className="bg-gray-100 border-b-2 border-gray-600 focus:outline-none focus:border-gray-900 focus:shadow-sm w-full p-3 h-16"
+          className="dark:text-gray-50 bg-gray-100 dark:bg-gray-900 border-b-2 border-gray-600 dark:border-gray-50 focus:outline-none focus:border-gray-900 dark:focus:border-gray-100 focus:shadow-sm w-full p-3 h-16"
           placeholder="name@example.com"
         />
         <label
           htmlFor="email"
-          className="absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out "
+          className="dark:text-gray-50 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out "
         >
           Email
         </label>
@@ -94,19 +103,19 @@ export default function Form() {
           name="message"
           ref={messageRef}
           required={true}
-          className="bg-gray-100 border-b-2 border-gray-600 focus:outline-none focus:border-gray-900 focus:shadow-sm w-full p-3 h-32"
+          className="dark:text-gray-50 bg-gray-100 dark:bg-gray-900 border-b-2 border-gray-600 dark:border-gray-50 focus:outline-none focus:border-gray-900 dark:focus:border-gray-100 focus:shadow-sm w-full p-3 h-32"
           placeholder="somthing something"
         />
         <label
           htmlFor="message"
-          className="absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out "
+          className="dark:text-gray-50 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out "
         >
           Message
         </label>
       </div>
 
       {!isSending ? (
-        <button className="w-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900  hover:text-gray-50 p-3 rounded-md transition-all duration-100">
+        <button className="w-full border-2 border-gray-900 dark:border-gray-50 text-gray-900 dark:text-gray-50 hover:bg-gray-900 dark:hover:bg-gray-50  hover:text-gray-50 dark:hover:text-gray-900 p-3 rounded-md transition-all duration-100">
           Send
         </button>
       ) : (

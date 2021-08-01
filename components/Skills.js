@@ -1,6 +1,6 @@
-import React from "react";
-import { BsGearFill } from "react-icons/bs";
-import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from "react-icons/io";
+import React from 'react';
+import { BsGearFill } from 'react-icons/bs';
+import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from 'react-icons/io';
 import {
   SiApollographql,
   SiBootstrap,
@@ -10,11 +10,11 @@ import {
   SiSquarespace,
   SiTailwindcss,
   SiWordpress,
-} from "react-icons/si";
+} from 'react-icons/si';
 
 export default function Skills() {
   return (
-    <div className="grid grid-cols-3 gap-y-6">
+    <div className="grid grid-cols-3 gap-y-6 dark:text-gray-50">
       <div className="grid justify-items-center">
         <IoLogoJavascript className="w-16 h-16" />
         <p className="text-xl">JavaScript</p>

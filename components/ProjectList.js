@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { useState } from "react";
-import Modal from "./Modal";
-import ProjectDetails from "./ProjectDetails";
+import Image from 'next/image';
+import { useState } from 'react';
+import Modal from './Modal';
+import ProjectDetails from './ProjectDetails';
 
 export default function ProjectList({ project }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function ProjectList({ project }) {
         className="flex cursor-pointer mb-16 md:mb-8"
       >
         <div>
-          <h2 className="text-2xl mb-4">{project.title}</h2>
+          <h2 className="text-2xl mb-4 dark:text-gray-50">{project.title}</h2>
           <div className="w-80 h-52 relative transition-all transform motion-safe:hover:scale-105">
             <Image
               className="rounded-md"

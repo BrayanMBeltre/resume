@@ -1,12 +1,12 @@
-import { FaGithub, FaTelegram } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import Form from "./Form";
-import UnderLineButton from "./UnderLineButton";
+import { FaGithub, FaTelegram } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import Form from './Form';
+import UnderLineButton from './UnderLineButton';
 
 export default function Contact() {
   return (
     <div className="grid md:grid-cols-2 items-center">
-      <div className="text-xl mb-8">
+      <div className="text-xl mb-8 dark:text-gray-50">
         {/* github */}
 
         <div className="flex items-center mb-8">
@@ -44,7 +44,7 @@ export default function Contact() {
             <a
               to="#"
               onClick={(e) => {
-                window.location = "mailto:brayanmbeltre@gmail.com";
+                window.location = 'mailto:brayanmbeltre@gmail.com';
                 e.preventDefault();
               }}
             >
@@ -55,7 +55,7 @@ export default function Contact() {
       </div>
 
       <div className="">
-        <h3 className="text-3xl mb-4">Send me an Email</h3>
+        <h3 className="text-3xl mb-4 dark:text-gray-50">Send me an Email</h3>
         <Form />
       </div>
     </div>
