@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
+import { useEffect, useState } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,7 +9,7 @@ export default function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -19,19 +19,19 @@ export default function ScrollToTop() {
       window.pageYOffset > 500 ? setIsVisible(true) : setIsVisible(false);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility);
 
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   return (
     <div
       className={`${
-        isVisible ? " opacity-100" : " opacity-0"
-      } border-2 hover:border-gray-900 border-gray-100 p-2 transition-all cursor-pointer`}
+        isVisible ? ' opacity-100' : ' opacity-0'
+      } border-2 hover:border-gray-900 dark:hover:border-gray-50 border-gray-100 dark:border-gray-900 p-2 transition-all cursor-pointer`}
       onClick={scrollToTop}
     >
-      <FaArrowUp className="w-6 h-6" />
+      <FaArrowUp className="w-6 h-6 dark:text-gray-50" />
     </div>
   );
 }

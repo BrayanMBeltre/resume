@@ -8,4 +8,4 @@ const env = {
   USER_ID,
 };
 
-module.exports = { env };
+module.exports = { reactStrictMode: true, env };

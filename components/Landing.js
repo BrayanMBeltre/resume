@@ -1,16 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Landing() {
   return (
     <div className="md:grid md:grid-cols-12 justify-center items-center mb-40 md:mb-24 text-center md:text-left mt-16 md:mt-0">
       <div className="col-span-7 z-10">
-        <h1 className="text-2xl md:text-5xl mb-12">
+        <h1 className="text-2xl md:text-5xl dark:text-gray-50 mb-12">
           I’m Brayan Montaño Beltre software developer from the Dominican
           Republic. I’m focused on Front-end/Web Development.
         </h1>
         <Link href="#About">
-          <a className="py-2 px-6 border-2 border-gray-900 text-gray-900 hover:bg-gray-900  hover:text-gray-50 rounded-md transition-all duration-100">
+          <a className="py-2 px-6 border-2 border-gray-900 dark:border-gray-50 text-gray-900 dark:text-gray-50 hover:bg-gray-900  dark:hover:bg-gray-50 hover:text-gray-50 dark:hover:text-gray-900 rounded-md transition-all duration-100">
             More About Me
           </a>
         </Link>

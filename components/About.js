@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Skills from "./Skills";
+import Image from 'next/image';
+import Skills from './Skills';
 
 export default function About() {
   return (
-    <div className="flex  flex-col md:grid md:grid-cols-2 md:gap-20 items-center justify-center">
+    <div className="flex flex-col md:grid md:grid-cols-2 md:gap-20 items-center justify-center">
       <div className="w-44 h-44 relative mb-8 md:hidden">
         <Image
           className="rounded-full"
@@ -15,8 +15,7 @@ export default function About() {
           priority={true}
         />
       </div>
-
-      <p className="text-xl md:text-2xl mb-16">
+      <p className="text-xl md:text-2xl mb-16 dark:text-gray-50">
         I’m a software developer from the Dominican Republic. I’m focused on
         Front-end/Web Development. Furthermore, I love to solve problems and
         create innovative interfaces. <br />I want to improve my skills to
