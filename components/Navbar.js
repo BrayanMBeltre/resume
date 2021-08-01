@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ThemeSwitch from './themeSwitch';
+import ThemeSwitch from './ThemeSwitch';
 import UnderLineButton from './UnderLineButton';
 
 export default function Navbar() {
