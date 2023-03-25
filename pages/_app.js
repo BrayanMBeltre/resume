@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
         async
         defer
         data-website-id="537b10f8-5f94-4e7b-86e7-d70443e4e38d"
-        src="/stats/script.js"
+        src="https://umami-test-eight.vercel.app/umami.js"
       />
 
       <ThemeProvider
