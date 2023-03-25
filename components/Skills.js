@@ -1,16 +1,16 @@
 import React from 'react';
-import { BsGearFill } from 'react-icons/bs';
-import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from 'react-icons/io';
+import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3 } from 'react-icons/io';
 import {
-  SiApollographql,
-  SiBootstrap,
   SiGit,
-  SiNextDotJs,
-  SiReact,
-  SiSquarespace,
   SiTailwindcss,
+  SiBootstrap,
+  SiReact,
+  SiNextdotjs,
+  SiApollographql,
   SiWordpress,
+  SiSquarespace,
 } from 'react-icons/si';
+import { BsGearFill } from 'react-icons/bs';
 
 export default function Skills() {
   return (
@@ -51,7 +51,7 @@ export default function Skills() {
       </div>
 
       <div className="grid justify-items-center">
-        <SiNextDotJs className="w-16 h-16" />
+        <SiNextdotjs className="w-16 h-16" />
         <p className="text-xl">Next.js</p>
       </div>
 

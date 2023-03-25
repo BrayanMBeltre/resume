@@ -1,11 +1,6 @@
-// next.config.js
-
-const { SERVICE_ID, TEMPLATE_ID, USER_ID } = process.env;
-
-const env = {
-  SERVICE_ID,
-  TEMPLATE_ID,
-  USER_ID,
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
-module.exports = { reactStrictMode: true, env };
+module.exports = nextConfig;

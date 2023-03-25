@@ -16,11 +16,10 @@ export default function ProjectList({ project }) {
           <h2 className="text-2xl mb-4 dark:text-gray-50">{project.title}</h2>
           <div className="w-80 h-52 relative transition-all transform motion-safe:hover:scale-105">
             <Image
-              className="rounded-md"
+              className="rounded-md object-cover"
               src={project.thumbnail}
               alt={project.alt}
-              layout="fill"
-              objectFit="cover"
+              fill
             />
           </div>
         </div>

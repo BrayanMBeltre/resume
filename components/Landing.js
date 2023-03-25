@@ -9,10 +9,11 @@ export default function Landing() {
           I’m Brayan Montaño Beltre software developer from the Dominican
           Republic. I’m focused on Front-end/Web Development.
         </h1>
-        <Link href="#About">
-          <a className="py-2 px-6 border-2 border-gray-900 dark:border-gray-50 text-gray-900 dark:text-gray-50 hover:bg-gray-900  dark:hover:bg-gray-50 hover:text-gray-50 dark:hover:text-gray-900 rounded-md transition-all duration-100">
-            More About Me
-          </a>
+        <Link
+          href="#About"
+          className="py-2 px-6 border-2 border-gray-900 dark:border-gray-50 text-gray-900 dark:text-gray-50 hover:bg-gray-900  dark:hover:bg-gray-50 hover:text-gray-50 dark:hover:text-gray-900 rounded-md transition-all duration-100"
+        >
+          More About Me
         </Link>
       </div>
       <div className="col-span-5 hidden md:flex justify-center z-0 ">

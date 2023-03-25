@@ -1,33 +1,26 @@
-import { DarkModeSwitch } from "react-toggle-dark-mode";
-import { useEffect, useState } from "react";
+// import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { useTheme } from 'next-themes';
+import dynamic from 'next/dynamic';
 
 export default function ThemeSwitch() {
-  const [isDarkMode, setDarkMode] = useState(
-    typeof window !== "undefined" ? localStorage.theme : false
-  );
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-
-    root.classList.remove(isDarkMode === true ? "light" : "dark");
-    root.classList.add(isDarkMode === true ? "dark" : "light");
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem("isDarkmode", isDarkMode);
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = (checked) => {
-    setDarkMode(checked);
-  };
+  const { theme, setTheme } = useTheme();
 
   return (
-    <div>
-      <DarkModeSwitch
-        checked={isDarkMode}
-        onChange={toggleDarkMode}
-        size={32}
-      />
-    </div>
+    <input
+      id="toggle"
+      className="toggle"
+      type="checkbox"
+      checked={theme === 'light'}
+      data-checked={true}
+      onChange={() => {
+        if (theme === 'light') {
+          setTheme('dark');
+
+          return;
+        }
+
+        return setTheme('light');
+      }}
+    />
   );
 }

@@ -4,7 +4,7 @@ import UnderLineButton from './UnderLineButton';
 
 export default function Navbar() {
   return (
-    <nav className="md:flex md:flex-row md:justify-between  py-8 px-6 bg-gray-100 dark:bg-gray-900 dark:text-gray-50  w-full text-center ">
+    <nav className="md:flex md:flex-row md:justify-between max-w-6xl mx-auto py-8 px-6   dark:text-gray-50  w-full text-center">
       <div className="mb-8 md:mb-0">
         <Link href="/" passHref>
           <UnderLineButton className="font-bold text-3xl">

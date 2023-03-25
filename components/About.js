@@ -4,14 +4,13 @@ import Skills from './Skills';
 export default function About() {
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 md:gap-20 items-center justify-center">
-      <div className="w-44 h-44 relative mb-8 md:hidden">
+      <div className="w-44 h-44 mb-8 md:hidden overflow-hidden rounded-full">
         <Image
-          className="rounded-full"
           draggable={false}
           src="/Profile.jpeg"
           alt="Profile Photo"
-          layout="fill"
-          objectFit="cover"
+          width={176}
+          height={176}
           priority={true}
         />
       </div>
