@@ -13,15 +13,15 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex gap-4 text-2xl text-center justify-center items-center">
-        <Link href="#About" passHref>
+        <a href="#About">
           <UnderLineButton>About</UnderLineButton>
-        </Link>
-        <Link href="#Projects" passHref>
+        </a>
+        <a href="#Projects">
           <UnderLineButton>Work</UnderLineButton>
-        </Link>
-        <Link href="#Contact" passHref>
+        </a>
+        <a href="#Contact">
           <UnderLineButton>Contact</UnderLineButton>
-        </Link>
+        </a>
         <ThemeSwitch />
       </div>
     </nav>
